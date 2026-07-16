@@ -3,5 +3,5 @@
 #include <print>
 
 int main(){
-    std::println("Hello, world!\n");
+    std::println("Hello, world!");
 }
