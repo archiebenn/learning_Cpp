@@ -1,4 +1,4 @@
-# learning_C
+# learning_C++
 Learning C basics with the aim to move into C++. This is essentially out of interest for programming and to improve my understanding of higher level languages, but being able to read/write in these languages may also be helpful for come comp bio stuff in the future (I hope).
 
 ## C
