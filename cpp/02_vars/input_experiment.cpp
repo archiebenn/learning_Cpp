@@ -51,10 +51,10 @@ int main(){
     // rather than checking stream functions like 'bad', 'eof', and 'fail' directly, the neater way is simply this
     // (this is a bit of 'syntactic sugar')
     if(std::cin){                                
-        std::cout << number << '\n';
+        std::cout << "And for the second if(stream) example, you entered: " << number << '\n';
     }
     else{
-        std::cout << "Bother!\n";
+        std::cout << "Bother! It failed\n";
     }
 
     // if(stream) = shothand for if(stream.operator bool())
