@@ -3,13 +3,18 @@
 
 #include <iostream>
 #include <print>
+#include <limits>
 
 int main(){
 
-    int number{};
+    const double largest = std::numeric_limits<double>::max();
 
-    std::println("Enter a number");
+    // set variable double to 0 ({} = 0)
+    double number{};
+
+    std::println("Enter a number smaller than {}", largest);
     std::cin >> number;
+    std::println("You entered: {}", number);
 
     // input streams like std::cin have an eof() function
     // eof() tells you if there are more characters left in the stream asfter an attempt to read
@@ -21,6 +26,41 @@ int main(){
         std::println("Unused input");
 
     }
+
+    /*
+    ./input_experiment 
+    Enter a number smaller than 1.7976931348623157e+308
+    a
+    You entered: 0
+    Unused input
+
+    ./input_experiment 
+    Enter a number smaller than 1.7976931348623157e+308
+    1a
+    You entered: 1
+    Unused input
+    */
+
+    // as above, a letter entered into the cin stream will lead to Unused input as it is non-numeric
+    // alongside eof, stream has a fail function which tells you if input has gone wrong
+    //if(std::cin.fail()){
+   //     std::cout << "Something went wrong!\n";
+   // }
+
+    // but in general, if something has gone wrong there are lots of ways it might have happened. 
+    // rather than checking stream functions like 'bad', 'eof', and 'fail' directly, the neater way is simply this
+    // (this is a bit of 'syntactic sugar')
+    if(std::cin){                                
+        std::cout << number << '\n';
+    }
+    else{
+        std::cout << "Bother!\n";
+    }
+
+    // if(stream) = shothand for if(stream.operator bool())
+    // the stream operator has a bool function which returns 0 or 1 is the stream passes/fails/is good/bad etc. 
+    // essentially, the if(stream) checks that the stream is good and would then evaluate to 1/TRue if so
+    // but the stream cannot be assigned to a bool data-type
 }
 
 
@@ -43,6 +83,23 @@ Unused input
 ./input_experiment 
 Enter a number
 747474.87733
+Unused input
+
+./input_experiment 
+Enter a number smaller than 2147483647
+1
+You entered: 1
+
+./input_experiment 
+Enter a number smaller than 2147483647
+1a
+You entered: 1
+Unused input
+
+./input_experiment 
+Enter a number smaller than 2147483647
+a
+You entered: 0
 Unused input
 
 */
