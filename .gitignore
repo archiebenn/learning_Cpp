@@ -11,3 +11,7 @@ cpp/**
 
 # python test stuff
 pybind/venv
+
+# other stuff
+*.log
+.vscode/
