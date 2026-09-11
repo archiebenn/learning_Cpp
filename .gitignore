@@ -16,7 +16,7 @@ cpp/**/*.exe
 cpp/**/a.out
 
 # python test stuff
-pybind/venv
+cpp/pybind/venv
 
 # other stuff
 *.log

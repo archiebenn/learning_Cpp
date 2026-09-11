@@ -1,0 +1,3 @@
+/home/ab/Dropbox/university/github/learning_C/cpp/build_systems/cmake_example/build-unix/CMakeFiles/hello_age.dir
+/home/ab/Dropbox/university/github/learning_C/cpp/build_systems/cmake_example/build-unix/CMakeFiles/edit_cache.dir
+/home/ab/Dropbox/university/github/learning_C/cpp/build_systems/cmake_example/build-unix/CMakeFiles/rebuild_cache.dir
