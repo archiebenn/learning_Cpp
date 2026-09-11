@@ -1,13 +1,19 @@
 *.o
 bin/
 
-# executables
-c/**
-!c/**/
-!c/**/*.c
-cpp/**
-!cpp/**/
-!cpp/**/*.cpp
+# executables etc.
+c/**/bin/
+c/**/build/
+c/**/*.o
+c/**/*.out
+c/**/*.exe
+c/**/a.out
+
+cpp/build/
+cpp/**/*.o
+cpp/**/*.out
+cpp/**/*.exe
+cpp/**/a.out
 
 # python test stuff
 pybind/venv
