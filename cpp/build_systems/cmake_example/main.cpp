@@ -7,6 +7,7 @@
 int main(){
 
     std::println("Hello!");
+    std::println("CMake test worked\n");
 
     process_age();
 }
