@@ -50,11 +50,12 @@ int main(){
     // but in general, if something has gone wrong there are lots of ways it might have happened. 
     // rather than checking stream functions like 'bad', 'eof', and 'fail' directly, the neater way is simply this
     // (this is a bit of 'syntactic sugar')
-    if(std::cin){                                
+
+    if(std::cin){        // checks stream to see if it's OK (boolean check)             
         std::cout << "And for the second if(stream) example, you entered: " << number << '\n';
     }
     else{
-        std::cout << "Bother! It failed\n";
+        std::cout << "Something went wrong!\n";
     }
 
     // if(stream) = shothand for if(stream.operator bool())
