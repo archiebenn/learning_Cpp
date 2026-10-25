@@ -1,10 +1,14 @@
 # pybind test 1 - comparing native python vs c++ speeds for sum of squares function (and np too for comparison)
+# and added a macbook version of the same test for comparison (see pybind_test01_mac.py)
 # will import the C++ function using include
 # this has already been compiled (see bottom of .cpp file)
 
-import cpp.pybind.pybind_test01 as pybind_test01      # imports pybind module (compiled from c++ program and containing squares_sum)
+#import pybind_test01_macbook as pybind_test01_mac  # imports pybind module (compiled from c++ program and containing squares_sum)
 import time
+
 import numpy as np
+# import pybind_test01 as pybind_test01  # imports pybind module (compiled from c++ program and containing squares_sum)  # noqa: PLC0414
+import pybind_test01 as pybind_test01  
 
 
 # create equivalent loop function in python for squares sum
@@ -27,7 +31,7 @@ def fast_py_squares_sum(n):
 
 
 # run both and compare times
-n = 100000000                 # sum squares up to n
+n = 1000000000                 # sum squares up to n
 print()
 
 # PYTHON 
