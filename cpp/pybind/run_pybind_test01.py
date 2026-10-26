@@ -3,9 +3,14 @@
 # will import the C++ function using include
 # this has already been compiled (see bottom of .cpp file)
 
+<<<<<<< HEAD:cpp/pybind/run_pybind_test01.py
 #import pybind_test01_macbook as pybind_test01_mac  # imports pybind module (compiled from c++ program and containing squares_sum)
 import time
 
+=======
+import pybind_test01 as pybind_test01      # imports pybind module (compiled from c++ program and containing squares_sum)
+import timeit
+>>>>>>> 618a250 (pybind testing):cpp/pybind/pybind_test01.py
 import numpy as np
 # import pybind_test01 as pybind_test01  # imports pybind module (compiled from c++ program and containing squares_sum)  # noqa: PLC0414
 import pybind_test01 as pybind_test01  
@@ -31,35 +36,31 @@ def fast_py_squares_sum(n):
 
 
 # run both and compare times
+<<<<<<< HEAD:cpp/pybind/run_pybind_test01.py
 n = 1000000000                 # sum squares up to n
+=======
+n = 500000000                 # sum squares up to n
+>>>>>>> 618a250 (pybind testing):cpp/pybind/pybind_test01.py
 print()
 
 # PYTHON 
-start = time.time()
-py_squares_sum(n)
-end = time.time()
-py_time = end - start
-print(f"Python loop time on {n} iterations: {py_time:.3f}s")
+py_time = timeit.timeit(lambda: py_squares_sum(n), number=1)
+print(f"Python loop time on {n} iterations: {py_time:.10f}s")
 
-# C++ pybind 
-start = time.time()
-pybind_test01.cpp_square_sum(n)
-end = time.time()
-cpp_time = end - start
-print(f"C++ loop time on {n} iterations: {cpp_time:.3f}s")
+# C++
+cpp_time = timeit.timeit(lambda: pybind_test01.cpp_square_sum(n), number=1)
+print(f"C++ loop time on {n} iterations: {cpp_time:.10f}s")
 
 # numpy .
-start = time.time()
-(np.arange(n + 1, dtype=np.int64) ** 2).sum()
-end = time.time()
-print(f"NumPy time on {n} iterations: {end - start:.3f}s")
+numpy_time = timeit.timeit(lambda: (np.arange(n + 1, dtype=np.int64) ** 2).sum()
+, number=1)
+print(f"NumPy loop time on {n} iterations: {numpy_time:.10f}s")
 
 # PYTHON/mathematical closed form speed
-start = time.time()
-fast_py_squares_sum(n)
-end = time.time()
-py_fast_time = end - start
-print(f"Closed form time: {py_fast_time:.3f}s")
+solved_time = timeit.timeit(lambda: fast_py_squares_sum(n), number=1)
+print(f"Closed form time on {n} iterations: {solved_time:.10f}s")
+
+
 
 
 # example output!

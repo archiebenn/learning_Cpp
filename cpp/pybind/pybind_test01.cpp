@@ -27,5 +27,14 @@ PYBIND11_MODULE(pybind_test01, m, py::mod_gil_not_used()) {
 
 
 // TO COMPILE
-// not like a normal executable as this is for a shared library (.so). compile as follows:
-// g++ -O3 -Wall -shared -std=c++11 -fPIC $(python3 -m pybind11 --includes) pybind_test01.cpp -o pybind_test01$(python3 -m pybind11 --extension-suffix)
+// Run from this directory with the same Python environment used to import the module.
+// Linux:
+// g++ -O3 -Wall -shared -std=c++17 -fPIC $(python3 -m pybind11 --includes) pybind_test01.cpp -o pybind_test01$(python3 -m pybind11 --extension-suffix)
+// macOS:
+// clang++ -O3 -Wall -shared -std=c++17 -undefined dynamic_lookup -fPIC $(python3 -m pybind11 --includes) pybind_test01.cpp -o pybind_test01$(python3 -m pybind11 --extension-suffix)
+
+// also testing different optimisations:
+//clang++ -O0 -Wall -shared -std=c++17 -undefined dynamic_lookup -fPIC $(python3 -m pybind11 --includes) pybind_test01.cpp -o pybind_test01$(python3 -m pybind11 --extension-suffix)
+//clang++ -O1 -Wall -shared -std=c++17 -undefined dynamic_lookup -fPIC $(python3 -m pybind11 --includes) pybind_test01.cpp -o pybind_test01$(python3 -m pybind11 --extension-suffix)
+//clang++ -O2 -Wall -shared -std=c++17 -undefined dynamic_lookup -fPIC $(python3 -m pybind11 --includes) pybind_test01.cpp -o pybind_test01$(python3 -m pybind11 --extension-suffix)
+//clang++ -O3 -Wall -shared -std=c++17 -undefined dynamic_lookup -fPIC $(python3 -m pybind11 --includes) pybind_test01.cpp -o pybind_test01$(python3 -m pybind11 --extension-suffix)

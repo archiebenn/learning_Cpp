@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/sj19031/Library/CloudStorage/Dropbox/university/github/learning_Cpp/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -arch arm64 -o CMakeFiles/cmake_test.dir/main.cpp.o -c /Users/sj19031/Library/CloudStorage/Dropbox/university/github/learning_Cpp/cpp/build_systems/cmake_example/main.cpp",
+  "file": "/Users/sj19031/Library/CloudStorage/Dropbox/university/github/learning_Cpp/cpp/build_systems/cmake_example/main.cpp",
+  "output": "CMakeFiles/cmake_test.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/sj19031/Library/CloudStorage/Dropbox/university/github/learning_Cpp/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++23 -arch arm64 -o CMakeFiles/cmake_test.dir/age.cpp.o -c /Users/sj19031/Library/CloudStorage/Dropbox/university/github/learning_Cpp/cpp/build_systems/cmake_example/age.cpp",
+  "file": "/Users/sj19031/Library/CloudStorage/Dropbox/university/github/learning_Cpp/cpp/build_systems/cmake_example/age.cpp",
+  "output": "CMakeFiles/cmake_test.dir/age.cpp.o"
+}
+]
