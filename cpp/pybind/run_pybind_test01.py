@@ -3,14 +3,8 @@
 # will import the C++ function using include
 # this has already been compiled (see bottom of .cpp file)
 
-<<<<<<< HEAD:cpp/pybind/run_pybind_test01.py
-#import pybind_test01_macbook as pybind_test01_mac  # imports pybind module (compiled from c++ program and containing squares_sum)
-import time
-
-=======
 import pybind_test01 as pybind_test01      # imports pybind module (compiled from c++ program and containing squares_sum)
 import timeit
->>>>>>> 618a250 (pybind testing):cpp/pybind/pybind_test01.py
 import numpy as np
 # import pybind_test01 as pybind_test01  # imports pybind module (compiled from c++ program and containing squares_sum)  # noqa: PLC0414
 import pybind_test01 as pybind_test01  
@@ -36,11 +30,7 @@ def fast_py_squares_sum(n):
 
 
 # run both and compare times
-<<<<<<< HEAD:cpp/pybind/run_pybind_test01.py
-n = 1000000000                 # sum squares up to n
-=======
 n = 500000000                 # sum squares up to n
->>>>>>> 618a250 (pybind testing):cpp/pybind/pybind_test01.py
 print()
 
 # PYTHON 
