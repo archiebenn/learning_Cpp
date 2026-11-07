@@ -3,6 +3,7 @@
 #include <cassert>
 #include <iostream>
 #include <print>
+#include <sstream>
 
 
 // test function
@@ -28,11 +29,39 @@ int pass_by_reference(int & x){
     return x;
 }
 
-// will now make a get_number function
+// will now make a get_number function - extracts numbers from stream
 // this can use a different stream rather than waiting for user input with std::cin  
-// therefore the function needs at least one parameter taking in a stream so it can extract numbers  
+// therefore the function needs at least one parameter taking in a stream so it can extract numbers from stream
+
+// std::istream accepts std::cin or std::dtringstream (as in test_code)  
+// need to pass BY REFERENCE as we will be changing the stream directly and changing number  
+bool get_number(std::istream &input_stream, double &number){
+
+    return false;
+
+}
+
 // can pass by reference here with &  
 // CONTINUE FROM HERE PAGE 27
+
+void test_get_num(){
+
+        double value{};
+         
+        // remember, stream is something that moves things into/out of an internal buffer
+        // and a buffer is what is read/written to with >> and << etc. 
+        // and is basically a single contiguous character sequence to be processed  
+        // std::stringstream type allows us to pass in a stream without needing user input like iostream stuff 
+        std::stringstream some_input{"1"}; // needs {} as explicit 
+
+        const bool ok = get_number(some_input, value);
+
+        assert(ok);
+        assert(value == 1);
+
+}
+
+
 
 
 int main(){
