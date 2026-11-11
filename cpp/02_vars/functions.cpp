@@ -1,9 +1,13 @@
 // calling functions outside main() - starting all in one source file
+// goes over passing by reference or value and how this changes variables outside function scope
+// also goes over streams and clearing them with clear and ignore  
 
 #include <cassert>
+#include <istream>
 #include <iostream>
 #include <print>
 #include <sstream>
+#include <limits>
 
 
 // test function
@@ -45,11 +49,20 @@ bool get_number(std::istream &input_stream, double &number){
     }
     else 
     {
-        return false;
+        // return false but clear the stream as well while still returning false
+        std::cin.clear(); // clears stream error so everything is ok again
+        // however, even after .clear(), the leftover issue is still in the stream e.g the char 'q'  
+        // so need another clearing stream method:
+        std::cin.ignore(    // ignore lefover characters in stream  
+            std::numeric_limits<std::streamsize>::max(),  // ignore up to the stream's maximum possible size (guaranteed FULL ignore/reset)  
+            '\n' // or until reaches newline
+        );
+
+        return false; 
     }
 }
 
-
+// not used in main but for testing before
 void test_get_num(){
 
         double value{};
@@ -93,14 +106,14 @@ int main(){
     std::println("------------Testing get_number() function-------------");
 
     // test_get_num() - pages 28-32ish
-    test_get_num();
+    // test_get_num();
 
-    // now running get_number directly in main too  
+    // now running get_number() directly in main
     double number{};
-    std::println("Please enter a number"); // works as std::istream &input_stream in get_number() accepts std::cin as input
+    std::println("Please enter a number:"); // works as std::istream &input_stream in get_number() accepts std::cin as input
 
-    // output if get_number worked - std::cin as input
-    if(get_number(std::cin, number)) 
+    const bool ok = get_number(std::cin, number);
+    if(ok)
     {
         std::println("Got number: {}, thanks!", number);  
         // this above confused me a lot - turns out when passing by reference with &number, the 'number'
@@ -111,12 +124,17 @@ int main(){
     }
     else
     {
-        // re-trying but need to clear and empty stream first as non-doubles will be left over in stream if above failed  
-        // CARRY ON PAGE 35
+        // input stream std::cin has now been cleared (see ignore and clear in get_number() when input is a non-double)
         std::println("Something went wrong!");
-        std::println("Please enter a number"); 
-        if(get_number(std::cin, number)) 
+        std::println("Please enter a number:"); 
+        const bool ok_now = get_number(std::cin, number);
+        if(ok_now)
         {
             std::println("Got number: {}, thanks!", number); 
         }
+        else
+        {
+            std::println("Something went wrong again!");
+        }
+    }
 }
