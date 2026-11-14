@@ -24,8 +24,10 @@ Now working through a new C++ book (Introducing C++ by Frances Buontempo, 2026)
 
 - 2nd book: [Discovering Modern C++](https://www.oreilly.com/library/view/discovering-modern-c/9780136798477/) by Peter Gottschling  
 - 3rd book: [Effective Modern C++](https://www.oreilly.com/library/view/effective-modern-c/9781491908419/) by Scott Meyers  
-- 4th book: [Real Time C++](https://link.springer.com/book/9783662742990) 
+- 4th book (a): [Real Time C++](https://link.springer.com/book/9783662742990) 
 - - for embedded stuff  
+- 4th book (b): [C++ High performance](https://www.oreilly.com/library/view/c-high-performance/9781839216541/)  
+- - for speed critical stuff  
 
 ## Some extra C++ libraries and projects beyond the books  
 
