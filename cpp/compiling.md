@@ -3,5 +3,10 @@
 with a .cpp source file for a single compile:
 
 ```
-g++-14 -Wall -std=c++23 main.cpp -o main
+# linux
+g++-14 -Wall -03 -std=c++23 main.cpp -o main
+
+# macos
+clang++ -Wall -03 -std=c++23 main.cpp -o main
 ```
+

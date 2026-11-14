@@ -30,7 +30,7 @@ int pass_by_value(int x){
 // function which passes by refreence (x is passed directly and can be changed)
 int pass_by_reference(int &x){
     x = x*2;
-    return x;
+    return x; // is this even necessary with reference?  
 }
 
 // will now make a get_number function - extracts numbers from stream
