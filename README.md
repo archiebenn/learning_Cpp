@@ -7,7 +7,7 @@ Learning C and C++
 Working through an old and short book on C I found (C programming by Mike Mcgrath, 2006)  
 The main plan is just to get for this lower level programming vs my background in R/Python before moving onto and focusing on C++.  
 
-![C](book_images/c_programming.jpg "C book")
+<img src="book_images/c_programming.jpg" alt="C" width="400"/>
 
 - Only used in June 2026
 
@@ -15,7 +15,7 @@ The main plan is just to get for this lower level programming vs my background i
 
 Now working through a new C++ book (Introducing C++ by Frances Buontempo, 2026)
 
-![C++](book_images/introducing_cpp.jpg "C++ book")
+<img src="book_images/introducing_cpp.jpg" alt="C++" width="400"/>
 
 - Started: June 2026  
 - Finished:  
@@ -31,7 +31,7 @@ Now working through a new C++ book (Introducing C++ by Frances Buontempo, 2026)
 
 ## Some extra C++ libraries and projects beyond the books  
 
-#### Pybind  
+### Pybind  
 
 - Python bindings with `pybind11`
 
@@ -39,7 +39,7 @@ Learning about implementing C++ code into Python scripts with pybind which could
 
 Used in `seeVol` project for main algorithms e.g Amanatides & Woo ray tracing  
 
-#### SFML
+### SFML
 
-#### Using CMake  
+### Using CMake  
 
