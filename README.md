@@ -1,4 +1,4 @@
-# learning_C
+# learning_Cpp
 
 Learning C (and C++)
 
@@ -10,7 +10,6 @@ The main plan is just to get for this lower level programming vs my background i
 <img src="book_images/c_programming.jpg" alt="C" width="400"/>
 
 - Only used in June 2026
-- returning to C in November 2026  
 
 ## C++
 
