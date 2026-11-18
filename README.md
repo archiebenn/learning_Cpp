@@ -1,6 +1,6 @@
-# learning_C++
+# learning_C
 
-Learning C and C++
+Learning C (and C++)
 
 ## C
 
@@ -10,36 +10,24 @@ The main plan is just to get for this lower level programming vs my background i
 <img src="book_images/c_programming.jpg" alt="C" width="400"/>
 
 - Only used in June 2026
+- returning to C in November 2026  
 
 ## C++
 
-Now working through a new C++ book (Introducing C++ by Frances Buontempo, 2026)
+Also working through a new C++ book (Introducing C++ by Frances Buontempo, 2026)
 
 <img src="book_images/introducing_cpp.jpg" alt="C++" width="400"/>
 
 - Started: June 2026  
 - Finished:  
 
-## Next books to consider in order   
+## Next C++ books to consider in order   
 
 - 2nd book: [Discovering Modern C++](https://www.oreilly.com/library/view/discovering-modern-c/9780136798477/) by Peter Gottschling  
 - 3rd book: [Effective Modern C++](https://www.oreilly.com/library/view/effective-modern-c/9781491908419/) by Scott Meyers  
 - 4th book (a): [Real Time C++](https://link.springer.com/book/9783662742990) 
 - - for embedded stuff  
 - 4th book (b): [C++ High performance](https://www.oreilly.com/library/view/c-high-performance/9781839216541/)  
-- - for speed critical stuff  
-
-## Some extra C++ libraries and projects beyond the books  
-
-### Pybind  
-
-- Python bindings with `pybind11`
-
-Learning about implementing C++ code into Python scripts with pybind which could be useful for offloading computationally demanding aspects of Python scripts to C++ functions.  
-
-Used in `seeVol` project for main algorithms e.g Amanatides & Woo ray tracing  
-
-### SFML
-
-### Using CMake  
-
+- - for speed critical stuff
+ 
+  - 
