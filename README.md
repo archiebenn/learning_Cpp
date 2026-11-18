@@ -1,6 +1,6 @@
 # learning_Cpp
 
-Learning C (and C++)
+Learning C and C++
 
 ## C
 
