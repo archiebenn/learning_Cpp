@@ -21,3 +21,4 @@ cpp/pybind/venv
 # other stuff
 *.log
 .vscode/
+book_pdfs/*
