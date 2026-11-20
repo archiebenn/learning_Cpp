@@ -1,4 +1,5 @@
-// catching errors with exceptions and try etc.  
+// catching errors with exceptions
+// throwing an exception 
 // page 46 +
 
 #include <istream>
@@ -23,6 +24,8 @@ double get_number(std::istream &input_stream){
 
     // NEW PART
     throw std::exception{}; // throws an exceptions - default initialised with {}
+    // program stops if reached since it doesn't know what to do with the exception in this case  
+    // exception jumps to end of the current scope or the block  
 }
 
 
@@ -33,7 +36,7 @@ int main(){
 
     std::println("Enter a double");
     double output_num{};
-    output_num = get_number(std::cin);
+    output_num = get_number(std::cin); // any error here will cause exception to throw so program stops
 
     std::println("Got {}, thanks!", output_num);
 
