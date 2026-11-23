@@ -50,6 +50,7 @@ int main(){
     auto num = get_number(std::cin);
     
     // as get_number will return non-values (string) if it fails to parse, need to check if it has a value/has worked
+    // note from page 56, can also just do if(num) as this is shorthand for num.has_value()
     if (num.has_value()){
         std::cout << "Retrieved " << num.value() << " from the stream, thanks!\n";
     } 
