@@ -38,7 +38,7 @@ int pass_by_reference(int &x){
 // therefore the function needs at least one parameter taking in a stream so it can extract numbers from stream
 
 // std::istream accepts std::cin or std::stringstream (as in test_code)  
-// need to pass BY REFERENCE as we will be changing the stream directly and changing number 
+// need to pass BY REFERENCE as we will be changing the stream input directly and changing number 
 bool get_number(std::istream &input_stream, double &number){
 
     input_stream >> number; // confused me: this >>operator tried to 'parse' a double out of input_stream

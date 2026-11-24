@@ -26,7 +26,8 @@ this also introduces us to *class templates*
 when a type is in <>, then it's from a class template (i.e from a header)
 */
 
-// want to be able to return an expected (double) and an unexpected (string):
+// std::expected<T, E> class template design -> True or Error, then can set type for which would be which...
+// want to be able to return an expected (double) for True, and an unexpected (string) for Error:
 std::expected<double, std::string> get_number(std::istream &user_input){
 
     // initialise and parse stream to number
