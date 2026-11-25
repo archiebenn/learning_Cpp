@@ -21,6 +21,8 @@ Here, T is class/typename which just means the type, and N is the size of the ar
 
 #include <array>
 #include <iostream>
+#include <expected>
+#include <limits>
 
 void array_experiment(){
 
@@ -37,8 +39,41 @@ void array_experiment(){
     std::cout << numbers_array[0] << '\n'; 
 }
 
+// re-doing get_number() again here
+std::expected<double, std::string> get_number(std::istream &user_input){
+
+    // initialise and parse stream to number
+    double number{};
+    user_input >> number;
+
+    // parse successful - user_input flags change to show this
+    if(user_input){
+        return number;
+        // exits
+    }
+    // clear up stream errors + mop up unused input if non-numeric (as now calling this function in a loop)
+    user_input.clear();
+    user_input.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    // unexpected string if fails
+    return std::unexpected{"That's not a number\n"};
+}
+
 int main(){
 
-    array_experiment();
+    int n = 5;
+    int s = 0;
+    std::array<double, 5> numbers_array{};
 
+    while (s < n){
+        // actually wrote this block below myself without book but will check
+        auto num = get_number(std::cin); 
+        if (num.has_value()){
+            numbers_array[s] = num.value(); // use .value to extract the double to the array
+            s++;
+        }
+
+        // CARRY ON FROM HERE PG. 66 - FIX THIS 
+
+    }
 }
